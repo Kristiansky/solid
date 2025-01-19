@@ -19,6 +19,8 @@ class SaleFactory extends Factory
         return [
             'description' => fake()->sentence(3),
             'charge' => fake()->randomFloat(2, 9, 259),
+            'created_at' => fake()->dateTimeBetween('-1 year', '-1 month'),
+            'updated_at' => fake()->dateTimeBetween('-1 week', 'now'),
         ];
     }
 }
