@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Calculators\SalesCalculator;
+use App\Http\Controllers\Connections\DbConnection;
 use App\Http\Controllers\Output\HtmlOutput;
 use App\Http\Controllers\Output\JsonOutput;
+use App\Http\Controllers\PasswordReminder;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\ShapeController;
 use App\Models\CrewMembers\AndroidWorker;
@@ -51,3 +53,8 @@ Route::get('/interface-segregation', function ()
     echo $captain->hire($humanWorker) . '<br/>';
 
 })->name('i');
+
+Route::get('/dependency-inversion', function ()
+{
+    (new PasswordReminder(new DbConnection()))->remind();
+})->name('d');
