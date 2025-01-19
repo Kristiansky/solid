@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Calculators\SalesCalculator;
-use App\Http\Controllers\Output\SalesOutputInterface;
+use App\Http\Controllers\Output\OutputInterface;
 use Illuminate\Http\Request;
 
 class SaleController extends Controller
@@ -15,7 +15,7 @@ class SaleController extends Controller
         $this->salesCalculator = $salesCalculator;
     }
 
-    public function index($startDate, $endDate, SalesOutputInterface $formatter)
+    public function betweenDates($startDate, $endDate, OutputInterface $formatter)
     {
         $sales = $this->salesCalculator->between($startDate, $endDate);
 

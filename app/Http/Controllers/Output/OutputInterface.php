@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Output;
 
-interface SalesOutputInterface
+interface OutputInterface
 {
     public function output($sales);
 }

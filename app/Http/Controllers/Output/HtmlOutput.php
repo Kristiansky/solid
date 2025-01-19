@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Output;
 
-use App\Http\Controllers\Output\SalesOutputInterface;
+use App\Http\Controllers\Output\OutputInterface;
 
-class HtmlOutput implements SalesOutputInterface
+class HtmlOutput implements OutputInterface
 {
 
     public function output($sales): string
