@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Lesson;
 use App\Models\Sale;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -22,5 +23,6 @@ class DatabaseSeeder extends Seeder
 //        ]);
 
         Sale::factory(85)->create();
+        Lesson::factory(5)->create();
     }
 }

@@ -21,11 +21,18 @@ Route::get('/open-closed', function ()
 {
     $shapes[] = new Circle(5);
     $shapes[] = new Circle(9);
-    $shapes[] = new Rectangle(8,56);
+    $shapes[] = new Rectangle(8,56.3);
     $shapes[] = new Circle(28);
-    $shapes[] = new Rectangle(4,36);
-    $shapes[] = new Rectangle(7,9);
+    $shapes[] = new Rectangle(4.1,36);
+    $shapes[] = new Rectangle(7,9.194);
 
     $areas = new ShapeController();
     return $areas->calculateAreas($shapes, new HtmlOutput());
 })->name('o');
+
+Route::get('/liskov-substitution', function ()
+{
+    foreach((new App\Http\Controllers\LessonController)->index() as $lesson){
+        echo $lesson['title'] . '<br>' . $lesson['description'] . '<br><br>';
+    }
+})->name('l');

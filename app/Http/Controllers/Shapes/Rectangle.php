@@ -14,7 +14,7 @@ class Rectangle implements ShapeInterface
         $this->width = $width;
         $this->height = $height;
     }
-    public function area(): float|int
+    public function area(): float
     {
         return $this->width * $this->height;
     }
