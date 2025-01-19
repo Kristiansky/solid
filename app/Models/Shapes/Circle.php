@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Shapes;
+namespace App\Models\Shapes;
 
-use App\Http\Controllers\Shapes\ShapeInterface;
+use Illuminate\Database\Eloquent\Model;
 
-class Circle implements ShapeInterface
+class Circle extends Model implements ShapeInterface
 {
     private $radius;
 

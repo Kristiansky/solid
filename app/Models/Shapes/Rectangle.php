@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Shapes;
+namespace App\Models\Shapes;
 
-use App\Http\Controllers\Shapes\ShapeInterface;
+use Illuminate\Database\Eloquent\Model;
 
-class Rectangle implements ShapeInterface
+class Rectangle extends Model implements ShapeInterface
 {
     private $width;
     private $height;

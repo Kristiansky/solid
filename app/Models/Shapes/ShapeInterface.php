@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Shapes;
+namespace App\Models\Shapes;
 
 interface ShapeInterface
 {
